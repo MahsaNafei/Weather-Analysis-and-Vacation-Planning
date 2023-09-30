@@ -60,7 +60,7 @@ The main part of data retrieval involves making API requests to OpenWeatherMap f
 
 -Export the city_data_df to a CSV file named "cities.csv" with "City_ID" as the index label. This CSV file can be used for future reference or analysis.
 
-## Data Visualization
+### Data Visualization
 
 The analysis creates scatter plots to showcase the relationship between weather variables and latitude for the cities. The following plots are generated:
 1. Latitude vs. Max Temperature
@@ -70,7 +70,7 @@ The analysis creates scatter plots to showcase the relationship between weather 
 
 Each plot is labeled and saved as a PNG file in the "output_data" directory.
 
-## Linear Regression
+### Linear Regression
 
 Linear regression analysis is performed to assess the relationships between latitude and weather variables in both the Northern and Southern Hemispheres. The following relationships are analyzed:
 1. Temperature vs. Latitude
@@ -79,19 +79,6 @@ Linear regression analysis is performed to assess the relationships between lati
 4. Wind Speed vs. Latitude
 
 The linear regression plots, including regression lines and equations, are displayed for each relationship. The r-value is also calculated to quantify the strength of the relationship.
-
-
-## Results
-
-- Latitude vs. Max Temperature: In the Northern Hemisphere, there is a strong negative correlation between latitude and maximum temperature, indicating that temperatures decrease as latitude increases. In the Southern Hemisphere, there is a strong positive correlation, indicating that temperatures increase as latitude approaches the equator.
-
-- Latitude vs. Humidity: Both the Northern and Southern Hemispheres show very weak positive correlations between latitude and humidity, suggesting that latitude alone is not a reliable predictor of humidity.
-
-- Latitude vs. Cloudiness: Latitude and cloudiness have weak positive correlations in both hemispheres, indicating a slight tendency for cloudiness to increase with latitude.
-
-- Latitude vs. Wind Speed: Latitude and wind speed have very weak correlations in both hemispheres, suggesting that latitude is not a strong predictor of wind speed.
-
-These findings provide insights into the relationship between latitude and various weather variables for a random selection of cities.
 
 
 ### Instructions
@@ -118,11 +105,11 @@ This project uses data from the WeatherPy analysis to find ideal vacation spots 
 
 - The data for this analysis is obtained from the WeatherPy analysis, where weather data for various cities was retrieved from the OpenWeatherMap API.
 
-## City Map with Humidity
+### City Map with Humidity
 
 The analysis begins by creating a map that displays a point for every city in the `city_data_df` DataFrame. The size of each point on the map corresponds to the humidity level in each city. This map provides a visual representation of cities and their humidity levels.
 
-## Ideal Weather Conditions
+### Ideal Weather Conditions
 
 The `city_data_df` DataFrame is narrowed down to find cities that match specific ideal weather conditions. The criteria for ideal weather conditions include:
 - Maximum temperature between 22°C (71.6°F) and 35°C (95°F).
@@ -132,21 +119,21 @@ The `city_data_df` DataFrame is narrowed down to find cities that match specific
 
 The resulting DataFrame, named `ideal_city`, contains cities that meet these criteria while also excluding any rows with null values.
 
-## Hotel Data
+### Hotel Data
 
 A new DataFrame named `hotel_df` is created to store information about hotels in the selected cities. This DataFrame includes the city, country, coordinates, humidity, and an empty column for the hotel name.
 
-## Finding Hotels
+### Finding Hotels
 
 The Geoapify API is used to search for hotels located within 10,000 meters of the coordinates of each city in the `hotel_df` DataFrame. A loop iterates through the DataFrame, making API requests for each city. The API searches for hotels near the city's coordinates and returns the name of the nearest hotel, which is then added to the `hotel_df` DataFrame.
 
 If no hotel is found within the specified radius, the hotel name is set as "No hotel found."
 
-## Map with Hotel Information
+### Map with Hotel Information
 
 A final map is created with city markers that include information about the nearest hotel and the country. The size of each marker still represents the humidity level in the city. This map provides an overview of ideal vacation spots with nearby hotels.
 
-### Instructions
+#### Instructions
 
 To use this script:
 
@@ -154,6 +141,5 @@ To use this script:
 2. Obtain an API key from Geoapify and save it in a file named `api_keys.py`.
 3. Run the provided code in a Python environment.
 4. The analysis results, including the map with hotel information, will be displayed.
-
 
 
