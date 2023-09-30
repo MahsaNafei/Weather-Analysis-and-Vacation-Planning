@@ -101,7 +101,7 @@ To use this script:
 
 This project uses data from the WeatherPy analysis to find ideal vacation spots based on specific weather conditions. It includes creating a map with city markers representing humidity, narrowing down cities that meet ideal weather criteria, finding nearby hotels using the Geoapify API, and displaying the hotels on the map.
 
-## Data Sources and Dependencies
+### Data Sources and Dependencies
 
 - The data for this analysis is obtained from the WeatherPy analysis, where weather data for various cities was retrieved from the OpenWeatherMap API.
 
