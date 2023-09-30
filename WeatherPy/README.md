@@ -14,51 +14,51 @@ Before retrieving weather data, you import the necessary libraries and set up yo
 
 **Generate Random Geographic Coordinates and City List:**
 
--To create a list of cities for which you want to retrieve weather data, you follow these steps:
+- To create a list of cities for which you want to retrieve weather data, you follow these steps:
 
--Create empty lists, lat_lngs for latitude and longitude combinations, and cities for city names.
+- Create empty lists, lat_lngs for latitude and longitude combinations, and cities for city names.
 
--Define the latitude and longitude ranges for random coordinate generation, lat_range (-90 to 90) and lng_range (-180 to 180).
+- Define the latitude and longitude ranges for random coordinate generation, lat_range (-90 to 90) and lng_range (-180 to 180).
 
--Generate random latitude and longitude pairs using NumPy's np.random.uniform() function.
+- Generate random latitude and longitude pairs using NumPy's np.random.uniform() function.
 
--Use the citipy library to identify the nearest city for each latitude and longitude pair. The city names are stored in the cities list.
+- Use the citipy library to identify the nearest city for each latitude and longitude pair. The city names are stored in the cities list.
 
--Ensure that only unique cities are added to the list.
+- Ensure that only unique cities are added to the list.
 
 **API Data Retrieval Loop:**
 
 The main part of data retrieval involves making API requests to OpenWeatherMap for each city in the cities list. This is done in a loop for each city:
 
--Create a base URL for the OpenWeatherMap API with the desired units and your API key.
+- Create a base URL for the OpenWeatherMap API with the desired units and your API key.
 
--Set up counters record_count and set_count to keep track of the API requests. These are used for logging purposes.
+- Set up counters record_count and set_count to keep track of the API requests. These are used for logging purposes.
 
--Loop through each city and its index in the cities list.
+- Loop through each city and its index in the cities list.
 
--Group cities into sets of 50 for logging purposes. When i is a multiple of 50 (e.g., 50, 100, 150...), increment set_count and reset record_count to 0.
+- Group cities into sets of 50 for logging purposes. When i is a multiple of 50 (e.g., 50, 100, 150...), increment set_count and reset record_count to 0.
 
--Create an endpoint URL for the specific city.
+- Create an endpoint URL for the specific city.
 
--Log the URL, record number, and set number to track progress.
+- Log the URL, record number, and set number to track progress.
 
--Attempt to make an API request for the city's weather data using requests.get().
+- Attempt to make an API request for the city's weather data using requests.get().
 
--Parse the JSON response to extract relevant weather data such as latitude, longitude, temperature, humidity, cloudiness, wind speed, country, and date.
+- Parse the JSON response to extract relevant weather data such as latitude, longitude, temperature, humidity, cloudiness, wind speed, country, and date.
 
--Append this data to the city_data list as a dictionary.
+- Append this data to the city_data list as a dictionary.
 
 **Data Loading Complete:**
 
--After completing the loop for all cities, you print a message indicating that data loading is complete.
+- After completing the loop for all cities, you print a message indicating that data loading is complete.
 
 **Data Conversion to DataFrame:**
 
--You convert the collected weather data in city_data into a Pandas DataFrame named city_data_df. This DataFrame will be used for analysis and visualization.
+- Convert the collected weather data in city_data into a Pandas DataFrame named city_data_df. This DataFrame will be used for analysis and visualization.
 
 **Data Export:**
 
--Export the city_data_df to a CSV file named "cities.csv" with "City_ID" as the index label. This CSV file can be used for future reference or analysis.
+- Export the city_data_df to a CSV file named "cities.csv" with "City_ID" as the index label. This CSV file can be used for future reference or analysis.
 
 ### Data Visualization
 
@@ -103,7 +103,7 @@ This project uses data from the WeatherPy analysis to find ideal vacation spots 
 
 ### Data Sources and Dependencies
 
-- The data for this analysis is obtained from the WeatherPy analysis, where weather data for various cities was retrieved from the OpenWeatherMap API.
+The data for this analysis is obtained from the WeatherPy analysis, where weather data for various cities was retrieved from the OpenWeatherMap API.
 
 ### City Map with Humidity
 
