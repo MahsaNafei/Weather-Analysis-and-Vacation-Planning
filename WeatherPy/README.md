@@ -50,15 +50,15 @@ The main part of data retrieval involves making API requests to OpenWeatherMap f
 
 **Data Loading Complete:**
 
-- After completing the loop for all cities, you print a message indicating that data loading is complete.
+After completing the loop for all cities, you print a message indicating that data loading is complete.
 
 **Data Conversion to DataFrame:**
 
-- Convert the collected weather data in city_data into a Pandas DataFrame named city_data_df. This DataFrame will be used for analysis and visualization.
+Convert the collected weather data in city_data into a Pandas DataFrame named city_data_df. This DataFrame will be used for analysis and visualization.
 
 **Data Export:**
 
-- Export the city_data_df to a CSV file named "cities.csv" with "City_ID" as the index label. This CSV file can be used for future reference or analysis.
+Export the city_data_df to a CSV file named "cities.csv" with "City_ID" as the index label. This CSV file can be used for future reference or analysis.
 
 ### Data Visualization
 
