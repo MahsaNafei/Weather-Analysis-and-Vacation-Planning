@@ -133,7 +133,7 @@ If no hotel is found within the specified radius, the hotel name is set as "No h
 
 A final map is created with city markers that include information about the nearest hotel and the country. The size of each marker still represents the humidity level in the city. This map provides an overview of ideal vacation spots with nearby hotels.
 
-#### Instructions
+### Instructions
 
 To use this script:
 
