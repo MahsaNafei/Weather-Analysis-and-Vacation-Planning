@@ -118,6 +118,8 @@ The `city_data_df` DataFrame is narrowed down to find cities that match specific
 - Humidity between 60% and 80%.
 
 The resulting DataFrame, named `ideal_city`, contains cities that meet these criteria while also excluding any rows with null values.
+![Map](https://github.com/MahsaNafei/python-api-challenge/blob/main/output/city_map.png)
+
 
 ### Hotel Data
 
@@ -132,6 +134,8 @@ If no hotel is found within the specified radius, the hotel name is set as "No h
 ### Map with Hotel Information
 
 A final map is created with city markers that include information about the nearest hotel and the country. The size of each marker still represents the humidity level in the city. This map provides an overview of ideal vacation spots with nearby hotels.
+
+![Hotel-Map](https://github.com/MahsaNafei/python-api-challenge/blob/main/output/city_hotel_map.png)
 
 ### Instructions
 
